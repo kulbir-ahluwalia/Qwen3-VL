@@ -1,0 +1,36 @@
+# Unsloth Qwen3-VL Fine-tuning Dependencies
+# ==========================================
+# Install with: pip install -r requirements.txt
+
+# Core ML framework
+torch>=2.5.0
+torchvision>=0.20.0
+
+# Unsloth (2x faster training, 60% less VRAM)
+unsloth>=2026.1
+
+# Transformers ecosystem
+transformers>=4.57.0
+trl>=0.24.0
+accelerate>=1.7.0
+peft>=0.17.0
+
+# Quantization
+bitsandbytes>=0.45.0
+
+# Data processing
+Pillow>=10.0.0
+numpy>=1.24.0
+tqdm>=4.66.0
+
+# Configuration
+pyyaml>=6.0
+
+# Logging
+wandb>=0.16.0
+
+# Optional: DeepSpeed for 32B model
+# deepspeed>=0.14.0
+
+# Optional: Flash Attention 2 (manual install recommended)
+# pip install flash-attn --no-build-isolation

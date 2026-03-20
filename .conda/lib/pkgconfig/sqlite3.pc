@@ -1,0 +1,13 @@
+# Package Information for pkg-config
+
+prefix=/home/kulbir-dgx-x1/Desktop/RSS_2026_23Jan_2D_waypoint_generation/Qwen3-VL/.conda
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: SQLite
+Description: SQL database engine
+Version: 3.51.2
+Libs: -L${libdir} -lsqlite3
+Libs.private: -lm -lz -ldl -lpthread 
+Cflags: -I${includedir}

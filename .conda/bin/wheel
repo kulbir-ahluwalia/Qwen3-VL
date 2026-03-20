@@ -1,0 +1,10 @@
+#!/home/kulbir-dgx-x1/Desktop/RSS_2026_23Jan_2D_waypoint_generation/Qwen3-VL/.conda/bin/python3.10
+# -*- coding: utf-8 -*-
+import re
+import sys
+
+from wheel.cli import main
+
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+    sys.exit(main())

@@ -1,0 +1,43 @@
+{
+  "name": "_openmp_mutex",
+  "version": "4.5",
+  "build": "2_gnu",
+  "build_number": 16,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-aarch64",
+  "subdir": "linux-aarch64",
+  "fn": "_openmp_mutex-4.5-2_gnu.tar.bz2",
+  "md5": "6168d71addc746e8f2b8d57dfd2edcea",
+  "url": "https://conda.anaconda.org/conda-forge/linux-aarch64/_openmp_mutex-4.5-2_gnu.tar.bz2",
+  "sha256": "3702bef2f0a4d38bd8288bbe54aace623602a1343c2cfbefd3fa188e015bebf0",
+  "depends": [
+    "libgomp >=7.5.0"
+  ],
+  "constrains": [
+    "openmp_impl 9999"
+  ],
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "timestamp": 1650670790230,
+  "size": 23712,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/home/kulbir-dgx-x1/anaconda3/pkgs/_openmp_mutex-4.5-2_gnu.tar.bz2",
+  "extracted_package_dir": "/home/kulbir-dgx-x1/anaconda3/pkgs/_openmp_mutex-4.5-2_gnu",
+  "files": [
+    "lib/libgomp.so.1"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/libgomp.so.1",
+        "path_type": "softlink",
+        "sha256": "568041e144e2bc9efc35412d2ade541ced28933dd1a5f7ccf7a588cb09114f37",
+        "size_in_bytes": 969280
+      }
+    ]
+  },
+  "link": {
+    "source": "/home/kulbir-dgx-x1/anaconda3/pkgs/_openmp_mutex-4.5-2_gnu",
+    "type": 1
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "libgcc-ng",
+  "version": "15.2.0",
+  "build": "he9431aa_16",
+  "build_number": 16,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-aarch64",
+  "subdir": "linux-aarch64",
+  "fn": "libgcc-ng-15.2.0-he9431aa_16.conda",
+  "md5": "3e54a6d0f2ff0172903c0acfda9efc0e",
+  "url": "https://conda.anaconda.org/conda-forge/linux-aarch64/libgcc-ng-15.2.0-he9431aa_16.conda",
+  "sha256": "22d7e63a00c880bd14fbbc514ec6f553b9325d705f08582e9076c7e73c93a2e1",
+  "depends": [
+    "libgcc 15.2.0 h8acb6b2_16"
+  ],
+  "constrains": [],
+  "license": "GPL-3.0-only WITH GCC-exception-3.1",
+  "license_family": "GPL",
+  "timestamp": 1765256948637,
+  "size": 27356,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/home/kulbir-dgx-x1/anaconda3/pkgs/libgcc-ng-15.2.0-he9431aa_16.conda",
+  "extracted_package_dir": "/home/kulbir-dgx-x1/anaconda3/pkgs/libgcc-ng-15.2.0-he9431aa_16",
+  "files": [],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": []
+  },
+  "link": {
+    "source": "/home/kulbir-dgx-x1/anaconda3/pkgs/libgcc-ng-15.2.0-he9431aa_16",
+    "type": 1
+  }
+}

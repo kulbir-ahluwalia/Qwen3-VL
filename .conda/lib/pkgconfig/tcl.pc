@@ -1,0 +1,16 @@
+# tcl pkg-config source file
+
+prefix=/home/kulbir-dgx-x1/Desktop/RSS_2026_23Jan_2D_waypoint_generation/Qwen3-VL/.conda
+exec_prefix=/home/kulbir-dgx-x1/Desktop/RSS_2026_23Jan_2D_waypoint_generation/Qwen3-VL/.conda
+libdir=/home/kulbir-dgx-x1/Desktop/RSS_2026_23Jan_2D_waypoint_generation/Qwen3-VL/.conda/lib
+includedir=${prefix}/include
+libfile=libtcl8.6.so
+
+Name: Tool Command Language
+Description: Tcl is a powerful, easy-to-learn dynamic programming language, suitable for a wide range of uses.
+URL: https://www.tcl-lang.org/
+Version: 8.6.13
+Requires.private: zlib >= 1.2.3
+Libs: -L${libdir} -ltcl8.6 -ltclstub8.6
+Libs.private: -ldl -lz  -lpthread -lm
+Cflags: -I${includedir}

@@ -1,0 +1,51 @@
+{
+  "name": "libexpat",
+  "version": "2.7.3",
+  "build": "hfae3067_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-aarch64",
+  "subdir": "linux-aarch64",
+  "fn": "libexpat-2.7.3-hfae3067_0.conda",
+  "md5": "b414e36fbb7ca122030276c75fa9c34a",
+  "url": "https://conda.anaconda.org/conda-forge/linux-aarch64/libexpat-2.7.3-hfae3067_0.conda",
+  "sha256": "cc2581a78315418cc2e0bb2a273d37363203e79cefe78ba6d282fed546262239",
+  "depends": [
+    "libgcc >=14"
+  ],
+  "constrains": [
+    "expat 2.7.3.*"
+  ],
+  "license": "MIT",
+  "license_family": "MIT",
+  "timestamp": 1763549910086,
+  "size": 76201,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/home/kulbir-dgx-x1/anaconda3/pkgs/libexpat-2.7.3-hfae3067_0.conda",
+  "extracted_package_dir": "/home/kulbir-dgx-x1/anaconda3/pkgs/libexpat-2.7.3-hfae3067_0",
+  "files": [
+    "lib/libexpat.so.1",
+    "lib/libexpat.so.1.11.1"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/libexpat.so.1",
+        "path_type": "softlink",
+        "sha256": "c293d34a1ddd2c27de3a9865fcc69c2a184857886cef12bb51595066f7c6196f",
+        "size_in_bytes": 216608
+      },
+      {
+        "_path": "lib/libexpat.so.1.11.1",
+        "path_type": "hardlink",
+        "sha256": "c293d34a1ddd2c27de3a9865fcc69c2a184857886cef12bb51595066f7c6196f",
+        "size_in_bytes": 216608,
+        "sha256_in_prefix": "c293d34a1ddd2c27de3a9865fcc69c2a184857886cef12bb51595066f7c6196f"
+      }
+    ]
+  },
+  "link": {
+    "source": "/home/kulbir-dgx-x1/anaconda3/pkgs/libexpat-2.7.3-hfae3067_0",
+    "type": 1
+  }
+}

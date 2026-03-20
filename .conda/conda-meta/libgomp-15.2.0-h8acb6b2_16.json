@@ -1,0 +1,55 @@
+{
+  "name": "libgomp",
+  "version": "15.2.0",
+  "build": "h8acb6b2_16",
+  "build_number": 16,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-aarch64",
+  "subdir": "linux-aarch64",
+  "fn": "libgomp-15.2.0-h8acb6b2_16.conda",
+  "md5": "4d2f224e8186e7881d53e3aead912f6c",
+  "url": "https://conda.anaconda.org/conda-forge/linux-aarch64/libgomp-15.2.0-h8acb6b2_16.conda",
+  "sha256": "0a9d77c920db691eb42b78c734d70c5a1d00b3110c0867cfff18e9dd69bc3c29",
+  "depends": [],
+  "constrains": [],
+  "license": "GPL-3.0-only WITH GCC-exception-3.1",
+  "license_family": "GPL",
+  "timestamp": 1765256821307,
+  "size": 587924,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/home/kulbir-dgx-x1/anaconda3/pkgs/libgomp-15.2.0-h8acb6b2_16.conda",
+  "extracted_package_dir": "/home/kulbir-dgx-x1/anaconda3/pkgs/libgomp-15.2.0-h8acb6b2_16",
+  "files": [
+    "lib/libgomp.so",
+    "lib/libgomp.so.1.0.0",
+    "share/licenses/gcc-libs/RUNTIME.LIBRARY.EXCEPTION.gomp_copy"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/libgomp.so",
+        "path_type": "softlink",
+        "sha256": "c6c7a920d940242f529debca62a612ebb276a809caf8722163a09e7249c6b348",
+        "size_in_bytes": 1578064
+      },
+      {
+        "_path": "lib/libgomp.so.1.0.0",
+        "path_type": "hardlink",
+        "sha256": "c6c7a920d940242f529debca62a612ebb276a809caf8722163a09e7249c6b348",
+        "size_in_bytes": 1578064,
+        "sha256_in_prefix": "c6c7a920d940242f529debca62a612ebb276a809caf8722163a09e7249c6b348"
+      },
+      {
+        "_path": "share/licenses/gcc-libs/RUNTIME.LIBRARY.EXCEPTION.gomp_copy",
+        "path_type": "hardlink",
+        "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74",
+        "size_in_bytes": 3324,
+        "sha256_in_prefix": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74"
+      }
+    ]
+  },
+  "link": {
+    "source": "/home/kulbir-dgx-x1/anaconda3/pkgs/libgomp-15.2.0-h8acb6b2_16",
+    "type": 1
+  }
+}

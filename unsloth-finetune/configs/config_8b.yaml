@@ -1,0 +1,34 @@
+# Qwen3-VL 8B Fine-tuning Configuration
+# =========================================
+# Optimized for 4x H100 80GB GPUs on Delta-AI
+# Uses 4-bit quantization + LoRA for efficiency
+
+# Model
+model_size: "8B"
+max_seq_length: 2048
+
+# Training
+batch_size: 2
+gradient_accumulation: 4
+learning_rate: 5e-4
+num_epochs: 3
+warmup_steps: 50
+
+# LoRA Configuration
+lora_r: 64
+lora_alpha: 128
+lora_dropout: 0.05
+finetune_vision: true
+finetune_language: true
+
+# Output
+output_dir: "./checkpoints/8b"
+export_gguf: true
+gguf_quantization: "q4_k_m"
+
+# Logging
+wandb_project: "qwen3vl-waypoints"
+logging_steps: 10
+
+# Misc
+seed: 42

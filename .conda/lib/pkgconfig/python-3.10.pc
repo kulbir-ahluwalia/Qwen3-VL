@@ -1,0 +1,13 @@
+# See: man pkg-config
+prefix=/home/kulbir-dgx-x1/Desktop/RSS_2026_23Jan_2D_waypoint_generation/Qwen3-VL/.conda
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: Python
+Description: Build a C extension for Python
+Requires:
+Version: 3.10
+Libs.private: -lcrypt -lpthread -ldl  -lutil -lm
+Libs:
+Cflags: -I${includedir}/python3.10

@@ -1,0 +1,53 @@
+{
+  "name": "ld_impl_linux-aarch64",
+  "version": "2.45",
+  "build": "default_h1979696_105",
+  "build_number": 105,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-aarch64",
+  "subdir": "linux-aarch64",
+  "fn": "ld_impl_linux-aarch64-2.45-default_h1979696_105.conda",
+  "md5": "849c4cbbf8dd1d71e66c13afed1d2f12",
+  "url": "https://conda.anaconda.org/conda-forge/linux-aarch64/ld_impl_linux-aarch64-2.45-default_h1979696_105.conda",
+  "sha256": "12e7341b89e9ea319a3b4de03d02cd988fa02b8a678f4e46779515009b5e475c",
+  "depends": [
+    "zstd >=1.5.7,<1.6.0a0"
+  ],
+  "constrains": [
+    "binutils_impl_linux-aarch64 2.45"
+  ],
+  "license": "GPL-3.0-only",
+  "license_family": "GPL",
+  "timestamp": 1766513180236,
+  "size": 876257,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/home/kulbir-dgx-x1/anaconda3/pkgs/ld_impl_linux-aarch64-2.45-default_h1979696_105.conda",
+  "extracted_package_dir": "/home/kulbir-dgx-x1/anaconda3/pkgs/ld_impl_linux-aarch64-2.45-default_h1979696_105",
+  "files": [
+    "aarch64-conda-linux-gnu/bin/ld",
+    "bin/aarch64-conda-linux-gnu-ld"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "aarch64-conda-linux-gnu/bin/ld",
+        "path_type": "softlink",
+        "sha256": "46e80fef619a3919faf1655d8fd789dab194636639e6efe7e63bfd0ac4e85351",
+        "size_in_bytes": 4468720
+      },
+      {
+        "_path": "bin/aarch64-conda-linux-gnu-ld",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/binutils_split_1766512701088/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "sha256": "46e80fef619a3919faf1655d8fd789dab194636639e6efe7e63bfd0ac4e85351",
+        "size_in_bytes": 4468720,
+        "sha256_in_prefix": "8effbda12127d77d95a38b96fe75f4c3a0176aeee535e672d8d93d9b8e8cb7c3"
+      }
+    ]
+  },
+  "link": {
+    "source": "/home/kulbir-dgx-x1/anaconda3/pkgs/ld_impl_linux-aarch64-2.45-default_h1979696_105",
+    "type": 1
+  }
+}

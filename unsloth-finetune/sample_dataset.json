@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0",
+  "dataset": {
+    "name": "waypoint_generation_sample",
+    "created_utc": "2026-01-30T00:00:00Z",
+    "notes": "Sample dataset for testing the Unsloth fine-tuning pipeline"
+  },
+  "images": [
+    {
+      "image_id": "img_000001",
+      "rgb_path": "data/images/rgb/000001.png",
+      "depth_path": "data/images/depth/000001.png",
+      "bev_path": "data/images/bev/000001.png",
+      "camera": {
+        "intrinsics": {
+          "K": [
+            [640.0, 0.0, 640.0],
+            [0.0, 640.0, 360.0],
+            [0.0, 0.0, 1.0]
+          ],
+          "distortion_model": "plumb_bob",
+          "distortion_coeffs": [0.0, 0.0, 0.0, 0.0, 0.0]
+        },
+        "extrinsics": {
+          "frame": "camera_to_world",
+          "T_cam_to_world": [
+            [1.0, 0.0, 0.0, 0.0],
+            [0.0, 1.0, 0.0, 0.0],
+            [0.0, 0.0, 1.0, 0.0],
+            [0.0, 0.0, 0.0, 1.0]
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "prompt_id": "img_000001_p01",
+          "nl_command": "Go to the red bucket near the table.",
+          "generated_output_text_original": "Go straight 2 meters, then turn right and move 1 meter.",
+          "parsed_output_text": "[(0.0,0.0,0.0),(2.0,0.0,0.0),(2.0,-1.0,0.0)]",
+          "target": {
+            "bbox": {
+              "format": "xyxy",
+              "values": [412, 180, 512, 300],
+              "units": "pixels"
+            },
+            "mask": {
+              "format": "mots_png",
+              "paths": [
+                "data/masks/000001/target_01.png"
+              ],
+              "mots_object_id": 1001
+            }
+          },
+          "waypoints": {
+            "frame": "world",
+            "units": "meters",
+            "points": [
+              {"x": 0.0, "y": 0.0, "z": 0.0},
+              {"x": 2.0, "y": 0.0, "z": 0.0},
+              {"x": 2.0, "y": -1.0, "z": 0.0}
+            ]
+          }
+        },
+        {
+          "prompt_id": "img_000001_p02",
+          "nl_command": "Navigate to the blue cone on the left.",
+          "generated_output_text_original": "Move 1.5 meters forward, then 0.5 meters left.",
+          "parsed_output_text": "[(0.0,0.0,0.0),(1.5,0.0,0.0),(1.5,0.5,0.0)]",
+          "target": {
+            "bbox": {
+              "format": "xyxy",
+              "values": [120, 210, 190, 320],
+              "units": "pixels"
+            },
+            "mask": {
+              "format": "mots_png",
+              "paths": [
+                "data/masks/000001/target_02.png",
+                "data/masks/000001/target_02_alt.png"
+              ],
+              "mots_object_id": 1002
+            }
+          },
+          "waypoints": {
+            "frame": "world",
+            "units": "meters",
+            "points": [
+              {"x": 0.0, "y": 0.0, "z": 0.0},
+              {"x": 1.5, "y": 0.0, "z": 0.0},
+              {"x": 1.5, "y": 0.5, "z": 0.0}
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "image_id": "img_000002",
+      "rgb_path": "data/images/rgb/000002.png",
+      "depth_path": "data/images/depth/000002.png",
+      "bev_path": "data/images/bev/000002.png",
+      "camera": {
+        "intrinsics": {
+          "K": [
+            [640.0, 0.0, 640.0],
+            [0.0, 640.0, 360.0],
+            [0.0, 0.0, 1.0]
+          ],
+          "distortion_model": "plumb_bob",
+          "distortion_coeffs": [0.0, 0.0, 0.0, 0.0, 0.0]
+        },
+        "extrinsics": {
+          "frame": "camera_to_world",
+          "T_cam_to_world": [
+            [0.999, 0.0, 0.035, 0.1],
+            [0.0, 1.0, 0.0, 0.0],
+            [-0.035, 0.0, 0.999, 0.2],
+            [0.0, 0.0, 0.0, 1.0]
+          ]
+        }
+      },
+      "prompts": [
+        {
+          "prompt_id": "img_000002_p01",
+          "nl_command": "Go to the yellow box near the doorway.",
+          "generated_output_text_original": "Advance 3 meters, then turn left and go 1 meter.",
+          "parsed_output_text": "[(0.0,0.0,0.0),(3.0,0.0,0.0),(3.0,1.0,0.0)]",
+          "target": {
+            "bbox": {
+              "format": "xyxy",
+              "values": [500, 200, 620, 350],
+              "units": "pixels"
+            },
+            "mask": {
+              "format": "mots_png",
+              "paths": [
+                "data/masks/000002/target_01.png"
+              ],
+              "mots_object_id": 1003
+            }
+          },
+          "waypoints": {
+            "frame": "world",
+            "units": "meters",
+            "points": [
+              {"x": 0.0, "y": 0.0, "z": 0.0},
+              {"x": 3.0, "y": 0.0, "z": 0.0},
+              {"x": 3.0, "y": 1.0, "z": 0.0}
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+# Qwen3-VL-8B Distillation-Optimized Configuration
+# =================================================
+# Optimized for knowledge distillation from Qwen-235B teacher to Qwen-8B student
+# Based on: KD-LoRA (2024), Warmup-Distill (2025), VL2Lite (CVPR 2025)
+#
+# Key changes from baseline:
+#   - LoRA r: 64 → 32 (distillation doesn't need high capacity)
+#   - Learning rate: 5e-4 → 2e-5 (conservative for smooth convergence)
+#   - Warmup: 50 → 500 steps (bridges teacher-student distribution gap)
+#   - Batch: effective 8 → 32 (stabilizes coordinate regression)
+#   - Epochs: 3 → 5 (low LR needs more iterations)
+#
+# Usage:
+#   python finetune_qwen.py --config configs/config_8b_distill.yaml
+
+# Model configuration
+model_size: "8B"
+max_seq_length: 2048
+
+# LoRA configuration (distillation-optimized)
+lora_r: 32           # KD-LoRA research: r=32 optimal for teacher-student
+lora_alpha: 64       # Heuristic: alpha = 2×r
+lora_dropout: 0.0    # Unsloth recommends 0.0 for vision models
+
+# Fine-tuning scope (CRITICAL for BEV understanding)
+finetune_vision: true    # Must be true for BEV image interpretation
+finetune_language: true  # Must be true for waypoint output format
+
+# Training configuration (distillation-optimized)
+batch_size: 4            # Per-GPU batch size
+gradient_accumulation: 8 # Effective batch = 32 (stabilizes coordinate regression)
+learning_rate: 2.0e-5    # Conservative for distillation (prevents forgetting)
+num_epochs: 5            # More epochs needed with low LR
+warmup_steps: 500        # Extended warmup (Warmup-Distill research)
+weight_decay: 0.001      # Lower decay preserves teacher knowledge
+max_grad_norm: 0.5       # Gradient clipping for stability
+
+# Logging
+logging_steps: 10
+wandb_project: "qwen3vl-waypoints"
+wandb_run_name: "8b-distill-optimized"
+
+# Output
+output_dir: "./checkpoints/8b_distill"
+export_gguf: true
+gguf_quantization: "q4_k_m"
+
+# Reproducibility
+seed: 42

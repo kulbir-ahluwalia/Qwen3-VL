@@ -1,0 +1,42 @@
+# Qwen3-VL-32B Distillation-Optimized Configuration
+# ==================================================
+# Optimized for knowledge distillation from Qwen-235B teacher to Qwen-32B student
+# Requires 4x H100 GPUs (80GB each) with DeepSpeed ZeRO-3
+#
+# Usage:
+#   deepspeed --num_gpus=4 finetune_qwen.py --config configs/config_32b_distill.yaml
+
+# Model configuration
+model_size: "32B"
+max_seq_length: 2048
+
+# LoRA configuration (distillation-optimized)
+lora_r: 32           # Same as 8B - distillation doesn't need high capacity
+lora_alpha: 64       # Heuristic: alpha = 2×r
+lora_dropout: 0.0    # Unsloth recommends 0.0 for vision models
+
+# Fine-tuning scope
+finetune_vision: true
+finetune_language: true
+
+# Training configuration (conservative for 32B)
+batch_size: 1            # Smaller due to model size
+gradient_accumulation: 16 # Effective batch = 16
+learning_rate: 1.0e-5    # Even more conservative for larger model
+num_epochs: 3            # Fewer epochs (larger model converges faster)
+warmup_steps: 300        # Proportionally shorter
+weight_decay: 0.001
+max_grad_norm: 0.3       # Tighter clipping for stability
+
+# Logging
+logging_steps: 10
+wandb_project: "qwen3vl-waypoints"
+wandb_run_name: "32b-distill-optimized"
+
+# Output
+output_dir: "./checkpoints/32b_distill"
+export_gguf: true
+gguf_quantization: "q4_k_m"
+
+# Reproducibility
+seed: 42

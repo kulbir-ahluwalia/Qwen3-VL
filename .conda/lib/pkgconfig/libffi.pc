@@ -1,0 +1,11 @@
+prefix=/home/kulbir-dgx-x1/Desktop/RSS_2026_23Jan_2D_waypoint_generation/Qwen3-VL/.conda
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+toolexeclibdir=${libdir}
+includedir=/home/kulbir-dgx-x1/Desktop/RSS_2026_23Jan_2D_waypoint_generation/Qwen3-VL/.conda/include
+
+Name: libffi
+Description: Library supporting Foreign Function Interfaces
+Version: 3.5.2
+Libs: -L${toolexeclibdir} -lffi
+Cflags: -I${includedir}
